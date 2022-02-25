@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 #include <unistd.h>
 
+#define iCase regex_constants::icase
 
 using namespace std;
 
@@ -12,7 +13,7 @@ int main(int argc, char const *argv[]) {
     if (argc != 2) {
         cout << "Usage: " << argv[0] << " <input_file>" << endl;
         return 1;
-    } else if (!regex_match(argv[1], regex(R"(^(.*[\\\/]|)[a-zA-Z_][a-zA-Z_0-9 ]*\.bf$)"))) {
+    } else if (!regex_match(argv[1], regex(R"(^(.*[\\\/]|)[a-z_][a-z_0-9 ]*\.bf$)", iCase))) {
         cout << "Invalid file name" << endl;
         cout << "Enter a valid Brainfuck file name (*.bf)" << endl;
         return 1;
