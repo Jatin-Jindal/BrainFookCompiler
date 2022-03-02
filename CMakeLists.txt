@@ -3,4 +3,4 @@ project(BrainFook_Compiler)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(BrainFook_Compiler main.cpp)
+add_executable(BrainFook_Compiler main.cpp brainfuckProcessor.h)
