@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include <unistd.h>
+#include "brainfuckProcessor.h"
 
 #define iCase regex_constants::icase
 
@@ -38,6 +39,8 @@ int main(int argc, char const *argv[]) {
     file.close();
 
     // TODO: PARSE CODE HERE
+    BrainfuckProcessor processor(code);
+    processor.run();
 
     cout << "Code: \'" << code << '\'';
 
